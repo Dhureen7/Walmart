@@ -19,7 +19,7 @@ def load_x_train():
 X_train = load_x_train()
 wal_model = load_model()
 
-st.image('assets/walmart_logo.png', width=150)
+st.image('assets/buzzbuy-logo.png', width=200)
 
 def show_predict_page():
     
@@ -27,13 +27,13 @@ def show_predict_page():
         """
         <style>
         .stApp {
-            background-color: #008AFF;
+            background-color: #0B59D5;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
-    st.title('Walmart Prediction')
+    st.title('BuzzBuy Prediction')
 
     subcategories = ['Dairy', 
                      'Beverages',

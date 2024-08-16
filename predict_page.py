@@ -7,19 +7,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def load_model():
-    with open('assets/wal_model.pkl', 'rb') as f:
-        wal_model = pkl.load(f)
-    return wal_model
+        with open('assets/wal_model.pkl', 'rb') as f:
+            wal_model = pkl.load(f)
+        return wal_model
 
 def load_x_train():
     with open('assets/x_train_file.pkl', 'rb') as f:
         X_train = pkl.load(f)
     return X_train
-
-X_train = load_x_train()
-wal_model = load_model()
-
-st.image('assets/buzzbuy-logo.png', width=200)
 
 def show_predict_page():
     
@@ -34,6 +29,11 @@ def show_predict_page():
         unsafe_allow_html=True
     )
     st.title('BuzzBuy Prediction')
+
+    X_train = load_x_train()
+    wal_model = load_model()
+
+    st.image('assets/buzzbuy-logo.png', width=200)
 
     subcategories = ['Dairy', 
                      'Beverages',

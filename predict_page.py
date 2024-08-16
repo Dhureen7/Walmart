@@ -70,7 +70,7 @@ def show_predict_page():
 
         discounted_price = wal_model.predict(to_predict)
 
-        st.subheader(f'The discounted price is ${discounted_price[0]}')
+        st.subheader(f'The discounted price is Rs.{discounted_price[0]}')
 
         # Initialize SHAP JavaScript visualization
         shap.initjs()

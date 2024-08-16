@@ -28,12 +28,12 @@ def show_predict_page():
         """,
         unsafe_allow_html=True
     )
+    
+    st.image('assets/buzzbuy-logo.png', width=200)
     st.title('BuzzBuy Prediction')
 
     X_train = load_x_train()
     wal_model = load_model()
-
-    st.image('assets/buzzbuy-logo.png', width=200)
 
     subcategories = ['Dairy', 
                      'Beverages',
